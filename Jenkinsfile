@@ -28,7 +28,7 @@ node {
     stage('Sonar execution') {
         // junit '**/target/surefire-reports/TEST-*.xml'
         // archiveArtifacts 'target/*.jar'  stage('SonarQube analysis') {
-        withSonarQubeEnv(credentialsId: 'SonarToken', installationName: 'SonarQubeDefault') { // You can override the credential to be used
+        withSonarQubeEnv(credentialsId: 'SonarToken', installationName: 'D1SonarQube') { // You can override the credential to be used
           bat 'mvn sonar:sonar'
         }
     }
