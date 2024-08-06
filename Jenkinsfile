@@ -7,14 +7,14 @@ node {
        // }
     stage('SCM checkout') { // for display purposes
         // Get some code from a GitHub repository
-        git 'https://github.com/pramilahalyal/simple-java-maven-app.git'
+        git 'https://github.com/pramilavhalyal/simple-java-maven-app.git'
         // Get the Maven tool.
         // ** NOTE: This 'M3' Maven tool must be configured
         // **       in the global configuration.
         mvnHome = tool 'Maven-3.8.4'
     }
  //   stage('Read POM') {
-//                  def pom = readMavenPom file: 'https://github.com/pramilahalyal/simple-java-maven-app/pom.xml'
+//                  def pom = readMavenPom file: 'https://github.com/pramilavhalyal/simple-java-maven-app/pom.xml'
 //                  echo "POM Group ID: ${pom.groupId}"
 //                  echo "POM Artifact ID: ${pom.artifactId}"            
 //  }
