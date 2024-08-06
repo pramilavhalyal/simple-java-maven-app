@@ -2,6 +2,9 @@ node {
     try {
     notifyStarted()
     def mvnHome
+         stage('Clean Workspace') {            
+                deleteDir()            
+        }
     stage('SCM checkout') { // for display purposes
         // Get some code from a GitHub repository
         git 'https://github.com/pramilahalyal/simple-java-maven-app.git'
