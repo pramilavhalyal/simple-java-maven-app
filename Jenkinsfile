@@ -13,11 +13,11 @@ node {
         // **       in the global configuration.
         mvnHome = tool 'Maven-3.8.4'
     }
-    stage('Read POM') {
-                    def pom = readMavenPom file: 'https://github.com/pramilahalyal/simple-java-maven-app/pom.xml'
-                    echo "POM Group ID: ${pom.groupId}"
-                    echo "POM Artifact ID: ${pom.artifactId}"            
-        }
+ //   stage('Read POM') {
+//                  def pom = readMavenPom file: 'https://github.com/pramilahalyal/simple-java-maven-app/pom.xml'
+//                  echo "POM Group ID: ${pom.groupId}"
+//                  echo "POM Artifact ID: ${pom.artifactId}"            
+//  }
     stage('Build') {
         // Run the maven build
         withEnv(["MVN_HOME=$mvnHome"]) {
