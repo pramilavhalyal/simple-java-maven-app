@@ -1,0 +1,19 @@
+name: PR Checklist
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Validate PR Checklist
+        run: |
+          if ! grep -q "\[ \]" "$GITHUB_EVENT_PATH"; then
+            echo "Checklist not completed"
+            exit 1
+          fi
