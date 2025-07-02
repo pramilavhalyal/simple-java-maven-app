@@ -11,7 +11,7 @@ node {
         // Get the Maven tool.
         // ** NOTE: This 'M3' Maven tool must be configured
         // **       in the global configuration.
-        mvnHome = tool 'Maven-3.8.4'
+        mvnHome = tool 'Maven-3.9.10'
     }
  //   stage('Read POM') {
 //                  def pom = readMavenPom file: 'https://github.com/pramilavhalyal/simple-java-maven-app/pom.xml'
